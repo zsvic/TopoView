@@ -53,7 +53,7 @@ var topoView = new TopoView("topoView");
 #### 5 设置拓扑数据并更新视图
 ```javascript
 topoView.setTopoInfo(snodes, hnodes, links);
-topoView.updataTopoView();
+topoView.updateTopoView();
 ```
 	
 
