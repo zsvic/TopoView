@@ -5,10 +5,10 @@
 
 #### 1 html中需要一个容器，如下：
 ```html
-	<div id="topoView">
-        <svg>
-        </svg>
-    </div>
+<div id="topoView">
+	<svg>
+	</svg>
+</div>
 ```
 #### 2 引入d3库（v4版本）和TopoView.js
 ```html
@@ -17,19 +17,19 @@
 ```	
 #### 3 提供拓扑数据
 ```javascript
-	var snodes = [{
-        "id": "1"
+var snodes = [{
+     "id": "1"
     }, {
-        "id": "2"
+     "id": "2"
     }, {
         "id": "3"
     }];
-    var hnodes = [{
+var hnodes = [{
         "id": "5"
     }, {
         "id": "6"
     }];
-    var links = [{
+var links = [{
         "source": "1",
         "target": "2"
     }, {
@@ -45,12 +45,12 @@
 ```	
 #### 4 创建TopoView对象，构造方法参数为html容器ID
 ```javascript
-	 var topoView = new TopoView("topoView"); 
+var topoView = new TopoView("topoView"); 
 ```
 #### 5 设置拓扑数据并更新视图
 ```javascript
-	topoView.setTopoInfo(snodes, hnodes, links);
-    topoView.updataTopoView();
+topoView.setTopoInfo(snodes, hnodes, links);
+topoView.updataTopoView();
 ```
 	
 
