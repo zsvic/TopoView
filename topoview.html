@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        .link {
+            stroke: green;
+            stroke: 1px;
+        }
+        
+        #topoView svg {
+            border: red solid 1px;
+        }
+        
+        #topoView {
+            margin-top: 100px;
+            margin-left: 100px;
+            height: 1000px;
+            width: 1500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topoView">
+        <svg>
+            <defs>
+             <pattern id="switchimg" patternUnits="userSpaceOnUse" width="40" height="40">
+                <image xlink:href="./img/switch.png" x="0" y="0" width="40" height="40" />
+             </pattern>
+             </defs>
+
+        </svg>
+    </div>
+</body>
+
+</html>
+
+<script src="./d3.min.js"></script>
+<script src="./topoView.js">
+</script>
+
+<script>
+    var snodes = [{
+        "id": "1"
+    }, {
+        "id": "2"
+    }, {
+        "id": "3"
+    }];
+    var hnodes = [{
+        "id": "5"
+    }, {
+        "id": "6"
+    }];
+    var links = [{
+        "source": "1",
+        "target": "2"
+    }, {
+        "source": "2",
+        "target": "3"
+    }, {
+        "source": "5",
+        "target": "1"
+    }, {
+        "source": "6",
+        "target": "3"
+    }]
+
+    var topoView = new TopoView("topoView");
+    topoView.setTopoInfo(snodes, hnodes, links);
+    topoView.updataTopoView();
+</script>
