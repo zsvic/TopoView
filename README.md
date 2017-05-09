@@ -3,19 +3,19 @@
 
 ### 使用方法；
 
-####1 html中需要一个容器，如下：
+#### 1 html中需要一个容器，如下：
 	```html
 	<div id="topoView">
         <svg>
         </svg>
     </div>
-	```
-####2 引入d3库（v4版本）和TopoView.js
+
+#### 2 引入d3库（v4版本）和TopoView.js
 	```html
 	<script src="./d3.min.js"></script>
 	<script src="./topoView.js"></script>
-	```
-####3 提供拓扑数据
+	
+#### 3 提供拓扑数据
     ```javascript
 	var snodes = [{
         "id": "1"
@@ -42,15 +42,15 @@
         "source": "6",
         "target": "3"
     }]
-	```
+	
 #### 4 创建TopoView对象，构造方法参数为html容器ID
 	```javascript
 	 var topoView = new TopoView("topoView"); 
-	```
+
 #### 5 设置拓扑数据并更新视图
 	```javascript
 	topoView.setTopoInfo(snodes, hnodes, links);
     topoView.updataTopoView();
-	```
+	
 	
 
