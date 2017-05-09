@@ -67,7 +67,7 @@ function TopoView(content) {
     }
 
     //更新拓扑视图
-    this.updataTopoView = function() {
+    this.updateTopoView = function() {
         svg.selectAll("*").remove();
 
 
